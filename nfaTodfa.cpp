@@ -7,6 +7,7 @@
 #include <queue>
 #include <sstream>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -152,14 +153,21 @@ int main() {
         cout << get<0>(t) << "\t| " << get<1>(t) << "\t\t| " << get<2>(t) << endl;
     }
 
-    cout << "\n\n========================================\n";
-    cout << "           DFA TRANSITION TABLE          \n";
-    cout << "========================================\n";
-    cout << "STATE\t\t| SYMBOL\t| NEXT STATE\n";
-    cout << "----------------------------------------\n";
-    for (const auto &t : dfa) {
-        cout << "{" << get<0>(t) << "}\t\t| " << get<1>(t) << "\t\t| {" << get<2>(t) << "}" << endl;
-    }
+
+cout << "\n\n===============================================================\n";
+cout << "                       DFA TRANSITION TABLE                    \n";
+cout << "===============================================================\n";
+cout << left << setw(25) << "STATE" << "| "
+     << setw(20) << "SYMBOL" << "| "
+     << setw(25) << "NEXT STATE" << endl;
+cout << "---------------------------------------------------------------\n";
+
+for (const auto &t : dfa) {
+    cout << left << setw(25) << ("{" + get<0>(t) + "}") << "| "
+         << setw(20) << get<1>(t) << "| "
+         << setw(25) << ("{" + get<2>(t) + "}") << endl;
+}
+
 
     return 0;
 }
