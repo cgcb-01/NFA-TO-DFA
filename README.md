@@ -1,7 +1,8 @@
 # NFA-TO-DFA
 # 🔁 NFA to DFA Converter (C++)
 
-This is a C++ command-line tool to convert a **Non-Deterministic Finite Automaton (NFA)** into a **Deterministic Finite Automaton (DFA)**. It allows you to input custom NFA components and outputs both the original NFA transition table and the generated DFA transition table.
+ > This is a C++ command-line tool to convert a **Non-Deterministic Finite Automaton (NFA)** into a **Deterministic Finite Automaton (DFA)**. It allows you to input custom NFA components and outputs both the original NFA transition table and the generated DFA transition table.
+
 ![States: NFA](https://img.shields.io/badge/States-yellow?style=flat-square&logo=appveyor&logoColor=black)
 ![Symbols: Input](https://img.shields.io/badge/Symbols-blue?style=flat-square&logo=typescript&logoColor=white)
 ![Conversion: NFA→DFA](https://img.shields.io/badge/Conversion-yellow?style=flat-square&logo=visual-studio-code&logoColor=black)
